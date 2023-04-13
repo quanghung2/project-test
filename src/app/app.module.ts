@@ -11,6 +11,7 @@ import en from '@angular/common/locales/en';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularLineawesomeModule } from 'angular-line-awesome';
+import { NavbarComponent } from './navbar/navbar.component';
 
 registerLocaleData(en);
 
@@ -32,7 +33,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavbarComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

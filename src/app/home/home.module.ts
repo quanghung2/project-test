@@ -10,6 +10,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 const routes: Route[] = [
   {
@@ -28,6 +29,7 @@ const routes: Route[] = [
     NzIconModule,
     NzCardModule,
     NzButtonModule,
+    NzDropDownModule,
   ],
   declarations: [HomeComponent],
   providers: [],
