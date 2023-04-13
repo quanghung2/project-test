@@ -10,6 +10,7 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import en from '@angular/common/locales/en';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularLineawesomeModule } from 'angular-line-awesome';
 
 registerLocaleData(en);
 
@@ -44,10 +45,9 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AngularLineawesomeModule,
   ],
-  providers: [
-    { provide: NZ_I18N, useValue: en_US }
-  ],
+  providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

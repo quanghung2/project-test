@@ -3,12 +3,12 @@
     nz-form
     [formGroup]="form"
     class="w-80 border border-inherit rounded-md p-6"
-    (ngSubmit)="submitForm()"
   >
     <p class="font-sans font-semibold text-lg text-center mb-4">Login</p>
+
     <nz-form-item>
       <nz-form-control nzErrorTip="Please input your username!">
-        <nz-input-group nzPrefixIcon="user">
+        <nz-input-group>
           <input
             type="text"
             nz-input
@@ -20,7 +20,7 @@
     </nz-form-item>
     <nz-form-item>
       <nz-form-control nzErrorTip="Please input your Password!">
-        <nz-input-group nzPrefixIcon="lock">
+        <nz-input-group>
           <input
             type="password"
             nz-input
@@ -40,7 +40,12 @@
         <a class="float-right">Forgot password</a>
       </div>
     </div>
-    <button nz-button class="w-full login-form-margin" [nzType]="'primary'">
+    <button
+      [disabled]="!form.valid"
+      type="button"
+      (click)="submitForm()"
+      class="group relative flex w-full justify-center rounded-md border border-transparent bg-blue-500 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:bg-blue-500 focus:ring-offset-2 hover:bg-blue-400"
+    >
       Login
     </button>
     Or

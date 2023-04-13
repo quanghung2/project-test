@@ -11,6 +11,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { AngularLineawesomeModule } from 'angular-line-awesome';
 
 const routes: Route[] = [
   {
@@ -30,6 +31,7 @@ const routes: Route[] = [
     NzCardModule,
     NzButtonModule,
     NzCheckboxModule,
+    AngularLineawesomeModule,
   ],
   declarations: [LoginComponent],
   providers: [],
