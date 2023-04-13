@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { LoginComponent } from './login.component';
+import { HomeComponent } from './home.component';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
 const routes: Route[] = [
   {
     path: '',
-    component: LoginComponent,
+    component: HomeComponent,
   },
 ];
 
@@ -29,12 +28,11 @@ const routes: Route[] = [
     NzIconModule,
     NzCardModule,
     NzButtonModule,
-    NzCheckboxModule,
   ],
-  declarations: [LoginComponent],
+  declarations: [HomeComponent],
   providers: [],
   exports: [],
 })
-export class LoginModule {
+export class HomeModule {
   constructor() {}
 }
