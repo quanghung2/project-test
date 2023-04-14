@@ -4,6 +4,7 @@ import { Route, RouterModule } from '@angular/router';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { LoginComponent } from './login.component';
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 const routes: Route[] = [
   {
@@ -18,6 +19,7 @@ const routes: Route[] = [
     RouterModule.forChild(routes),
     NzFormModule,
     NzCheckboxModule,
+    NzInputModule,
   ],
   declarations: [LoginComponent],
   providers: [],
