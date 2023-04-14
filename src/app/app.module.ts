@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, registerLocaleData } from '@angular/common';
-import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { en_US } from 'ng-zorro-antd/i18n';
-import en from '@angular/common/locales/en';
 import { HttpClientModule } from '@angular/common/http';
+import en from '@angular/common/locales/en';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AngularLineawesomeModule } from 'angular-line-awesome';
+import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
+import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 registerLocaleData(en);

@@ -7,41 +7,38 @@
     <p class="font-sans font-semibold text-lg text-center mb-4">Login</p>
 
     <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your username!">
-        <nz-input-group>
-          <input
-            type="text"
-            nz-input
-            formControlName="userName"
-            placeholder="Username"
-          />
-        </nz-input-group>
+      <nz-form-control nzErrorTip="Please input your username">
+        <input
+          type="text"
+          class="w-full p-2.5 text-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:border-blue-500"
+          placeholder="username"
+          formControlName="username"
+          required
+        />
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
       <nz-form-control nzErrorTip="Please input your Password!">
-        <nz-input-group>
-          <input
-            type="password"
-            nz-input
-            formControlName="password"
-            placeholder="Password"
-          />
-        </nz-input-group>
+        <input
+          type="password"
+          class="w-full p-2.5 text-sm bg-gray-50 border border-gray-300 text-gray-900 focus:outline-none focus:border-blue-500"
+          placeholder="password"
+          formControlName="password"
+          required
+        />
       </nz-form-control>
     </nz-form-item>
-    <div nz-row class="mb-2">
-      <div nz-col [nzSpan]="12">
+    <div class="flex flex-row justify-between mb-2">
+      <div class="flex flex-col">
         <label nz-checkbox formControlName="remember">
           <span>Remember me</span>
         </label>
       </div>
-      <div nz-col [nzSpan]="12">
+      <div class="flex flex-col">
         <a class="float-right">Forgot password</a>
       </div>
     </div>
     <button
-      [disabled]="!form.valid"
       type="button"
       (click)="submitForm()"
       class="group relative flex w-full justify-center rounded-md border border-transparent bg-blue-500 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:bg-blue-500 focus:ring-offset-2 hover:bg-blue-400"
