@@ -1,17 +1,9 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { LoginComponent } from './login.component';
-import { Route, RouterModule, Routes } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzCardModule } from 'ng-zorro-antd/card';
-import { NzButtonModule } from 'ng-zorro-antd/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Route, RouterModule } from '@angular/router';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
-import { AngularLineawesomeModule } from 'angular-line-awesome';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { LoginComponent } from './login.component';
 
 const routes: Route[] = [
   {
@@ -25,7 +17,6 @@ const routes: Route[] = [
     ReactiveFormsModule,
     RouterModule.forChild(routes),
     NzFormModule,
-    NzCardModule,
     NzCheckboxModule,
   ],
   declarations: [LoginComponent],

@@ -1,16 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Route, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { Route, RouterModule, Routes } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { NzCardModule } from 'ng-zorro-antd/card';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 const routes: Route[] = [
   {
@@ -20,17 +11,7 @@ const routes: Route[] = [
 ];
 
 @NgModule({
-  imports: [
-    ReactiveFormsModule,
-    RouterModule.forChild(routes),
-    NzFormModule,
-    NzInputModule,
-    NzDividerModule,
-    NzIconModule,
-    NzCardModule,
-    NzButtonModule,
-    NzDropDownModule,
-  ],
+  imports: [ReactiveFormsModule, RouterModule.forChild(routes)],
   declarations: [HomeComponent],
   providers: [],
   exports: [],
