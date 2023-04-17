@@ -5,6 +5,7 @@ import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { LoginComponent } from './login.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Route[] = [
   {
@@ -15,6 +16,7 @@ const routes: Route[] = [
 
 @NgModule({
   imports: [
+    CommonModule,
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forChild(routes),
