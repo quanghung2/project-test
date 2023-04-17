@@ -7,24 +7,24 @@
     <p class="font-sans font-semibold text-lg text-center mb-4">Login</p>
 
     <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your username">
+      <nz-form-control nzErrorTip="Please input your username!">
         <input
-          nz-input
           type="text"
-          id="password"
-          formControlName="username"
+          class="block w-full p-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500"
           placeholder="username"
+          formControlName="username"
+          required
         />
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
       <nz-form-control nzErrorTip="Please input your Password!">
         <input
-          nz-input
           type="password"
-          id="password"
-          formControlName="password"
+          class="block w-full p-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500"
           placeholder="password"
+          formControlName="password"
+          required
         />
       </nz-form-control>
     </nz-form-item>
