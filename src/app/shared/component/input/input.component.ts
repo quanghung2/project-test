@@ -19,14 +19,7 @@ export class InputComponet {
     controlDir.valueAccessor = this;
   }
 
-  ngOnInit(): void {
-    console.log(this.controlDir.control);
-    const control = this.controlDir.control;
-    const validators = control?.validator
-      ? [control.validator, Validators.required]
-      : Validators.required;
-    control?.setValidators(validators);
-  }
+  ngOnInit(): void {}
 
   writeValue(value: any): void {
     value && this.controlDir.control?.setValue(value, { emitEvent: false });
