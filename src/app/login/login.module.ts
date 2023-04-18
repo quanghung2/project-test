@@ -6,6 +6,7 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { LoginComponent } from './login.component';
 import { CommonModule } from '@angular/common';
+import { ShareModule } from '../shared/shared.module';
 
 const routes: Route[] = [
   {
@@ -23,6 +24,7 @@ const routes: Route[] = [
     NzFormModule,
     NzCheckboxModule,
     NzInputModule,
+    ShareModule,
   ],
   declarations: [LoginComponent],
   providers: [],

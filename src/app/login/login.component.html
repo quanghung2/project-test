@@ -8,13 +8,11 @@
 
     <nz-form-item>
       <nz-form-control [nzErrorTip]="errorTpl">
-        <input
-          type="email"
-          class="input-login input-invalid"
+        <app-input
           formControlName="username"
-          placeholder="you@example.com"
-          required
-        />
+          [type]="'email'"
+          [placeholder]="'you@gmail.com'"
+        ></app-input>
         <ng-template #errorTpl let-control>
           <ng-container *ngIf="username.errors?.['required']"
             >This field is required.</ng-container
@@ -28,13 +26,11 @@
     </nz-form-item>
     <nz-form-item>
       <nz-form-control nzErrorTip="This field is required.">
-        <input
-          type="password"
-          class="input-login input-invalid"
-          placeholder="password"
+        <app-input
           formControlName="password"
-          required
-        />
+          [type]="'password'"
+          [placeholder]="'password'"
+        ></app-input>
       </nz-form-control>
     </nz-form-item>
     <div class="flex flex-row justify-between mb-2">
@@ -47,7 +43,7 @@
         <a class="float-right text-blue-700">Forgot password</a>
       </div>
     </div>
-    <button type="button" (click)="submitForm()" class="btn-blue">Login</button>
+    <app-button (onClick)="submitForm()" [label]="'Login'"></app-button>
     Or
     <a class="text-blue-700">register now!</a>
   </form>
