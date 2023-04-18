@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required]],
     });
     this.username.valueChanges.subscribe((p) => console.log(p));
+    console.log(this.username.errors?.['required']);
   }
 
   submitForm() {

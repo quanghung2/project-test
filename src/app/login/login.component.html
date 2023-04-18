@@ -10,7 +10,7 @@
       <nz-form-control [nzErrorTip]="errorTpl">
         <input
           type="email"
-          class="block w-full p-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500"
+          class="input-login input-invalid"
           formControlName="username"
           placeholder="you@example.com"
           required
@@ -30,7 +30,7 @@
       <nz-form-control nzErrorTip="This field is required.">
         <input
           type="password"
-          class="block w-full p-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500"
+          class="input-login input-invalid"
           placeholder="password"
           formControlName="password"
           required
@@ -39,7 +39,7 @@
     </nz-form-item>
     <div class="flex flex-row justify-between mb-2">
       <div class="flex flex-col">
-        <label nz-checkbox formControlName="remember">
+        <label nz-checkbox>
           <span>Remember me</span>
         </label>
       </div>
@@ -47,13 +47,7 @@
         <a class="float-right text-blue-700">Forgot password</a>
       </div>
     </div>
-    <button
-      type="button"
-      (click)="submitForm()"
-      class="group relative flex w-full justify-center rounded-md border border-transparent bg-blue-500 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:bg-blue-500 focus:ring-offset-2 hover:bg-blue-400"
-    >
-      Login
-    </button>
+    <button type="button" (click)="submitForm()" class="btn-blue">Login</button>
     Or
     <a class="text-blue-700">register now!</a>
   </form>
