@@ -1,36 +1,42 @@
 import {
   Component,
-  EventEmitter,
+  INJECTOR,
+  Inject,
+  Injector,
   Input,
-  Output,
-  Self,
   SimpleChanges,
+  forwardRef,
 } from '@angular/core';
-import { FormGroup, NgControl, Validators } from '@angular/forms';
+import {
+  ControlValueAccessor,
+  NG_VALUE_ACCESSOR,
+  NgControl,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      multi: true,
+      useExisting: forwardRef(() => InputComponent),
+    },
+  ],
 })
-export class InputComponent {
+export class InputComponent implements ControlValueAccessor {
   @Input() placeholder: string = '';
-  @Input() error!: boolean;
   @Input() type!: string;
-  @Output() blur: EventEmitter<void> = new EventEmitter<void>();
-  disabled!: boolean;
-  isRequired!: boolean;
+  disabled = false;
   onChange: (value: any) => void = () => {};
   onTouched: () => void = () => {};
+  _control!: NgControl;
 
-  constructor(@Self() public controlDir: NgControl) {
-    controlDir.valueAccessor = this;
-  }
+  constructor(@Inject(INJECTOR) private injector: Injector) {}
 
-  ngOnInit(): void {
-    console.log(
-      this.controlDir.control?.touched && !this.controlDir.control?.valid
-    );
+  ngOnInit() {
+    this._control = this.injector.get(NgControl);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -38,7 +44,7 @@ export class InputComponent {
   }
 
   writeValue(value: any): void {
-    value && this.controlDir.control?.setValue(value, { emitEvent: false });
+    value && this._control.control?.setValue(value, { emitEvent: false });
   }
 
   registerOnChange(onChange: (value: any) => void): void {
