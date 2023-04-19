@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponet } from './component/button/button.component';
-import { InputComponet } from './component/input/input.component';
+import { InputComponent } from './component/input/input.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-const COMPONENT = [ButtonComponet, InputComponet];
+const COMPONENT = [ButtonComponet, InputComponent];
 
 @NgModule({
   imports: [CommonModule, FormsModule, ReactiveFormsModule],

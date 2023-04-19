@@ -1,0 +1,9 @@
+::ng-deep .ant-form-item-has-error {
+  app-input {
+    input {
+      background-color: #fff;
+      border-color: #ff4d4f !important;
+      --tw-ring-color: #ff4d4f !important;
+    }
+  }
+}

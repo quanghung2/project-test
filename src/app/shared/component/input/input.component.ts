@@ -1,13 +1,21 @@
-import { Component, EventEmitter, Input, Output, Self } from '@angular/core';
-import { NgControl, Validators } from '@angular/forms';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  Self,
+  SimpleChanges,
+} from '@angular/core';
+import { FormGroup, NgControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
 })
-export class InputComponet {
+export class InputComponent {
   @Input() placeholder: string = '';
+  @Input() error!: boolean;
   @Input() type!: string;
   @Output() blur: EventEmitter<void> = new EventEmitter<void>();
   disabled!: boolean;
@@ -19,7 +27,15 @@ export class InputComponet {
     controlDir.valueAccessor = this;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(
+      this.controlDir.control?.touched && !this.controlDir.control?.valid
+    );
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+  }
 
   writeValue(value: any): void {
     value && this.controlDir.control?.setValue(value, { emitEvent: false });
